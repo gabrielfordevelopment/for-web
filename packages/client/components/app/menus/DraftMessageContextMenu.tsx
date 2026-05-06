@@ -1,13 +1,15 @@
 import { Trans } from "@lingui-solid/solid/macro";
+import { Show } from "solid-js";
+import type { Channel } from "stoat.js";
+
+import { useClient } from "@revolt/client";
+import { useState } from "@revolt/state";
+import type { UnsentMessage } from "@revolt/state/stores/Draft";
+
 import MdClose from "@material-design-icons/svg/outlined/close.svg?component-solid";
 import MdContentCopy from "@material-design-icons/svg/outlined/content_copy.svg?component-solid";
 import MdDelete from "@material-design-icons/svg/outlined/delete.svg?component-solid";
 import MdRefresh from "@material-design-icons/svg/outlined/refresh.svg?component-solid";
-import { useClient } from "@revolt/client";
-import { useState } from "@revolt/state";
-import type { UnsentMessage } from "@revolt/state/stores/Draft";
-import { Show } from "solid-js";
-import type { Channel } from "stoat.js";
 
 import {
   ContextMenu,

@@ -1,4 +1,14 @@
 import { Trans } from "@lingui-solid/solid/macro";
+import { useNavigate } from "@solidjs/router";
+import { type JSX, Match, Show, Switch } from "solid-js";
+import type { Channel, Message, ServerMember, User } from "stoat.js";
+
+import { useClient } from "@revolt/client";
+import { useModals } from "@revolt/modal";
+import { useSmartParams } from "@revolt/routing";
+import { useState } from "@revolt/state";
+import { dismissFloatingElements, Slider, Text } from "@revolt/ui";
+
 import MdAccountCircle from "@material-design-icons/svg/outlined/account_circle.svg?component-solid";
 import MdAddCircleOutline from "@material-design-icons/svg/outlined/add_circle_outline.svg?component-solid";
 import MdAdminPanelSettings from "@material-design-icons/svg/outlined/admin_panel_settings.svg?component-solid";
@@ -17,14 +27,6 @@ import MdPersonRemove from "@material-design-icons/svg/outlined/person_remove.sv
 import MdReport from "@material-design-icons/svg/outlined/report.svg?component-solid";
 import MdChecked from "@material-symbols/svg-400/outlined/check_box.svg?component-solid";
 import MdUnchecked from "@material-symbols/svg-400/outlined/check_box_outline_blank.svg?component-solid";
-import { useClient } from "@revolt/client";
-import { useModals } from "@revolt/modal";
-import { useSmartParams } from "@revolt/routing";
-import { useState } from "@revolt/state";
-import { dismissFloatingElements, Slider, Text } from "@revolt/ui";
-import { useNavigate } from "@solidjs/router";
-import { type JSX, Match, Show, Switch } from "solid-js";
-import type { Channel, Message, ServerMember, User } from "stoat.js";
 
 import {
   ContextMenu,
